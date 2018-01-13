@@ -1,7 +1,7 @@
 {
   "name": "@aperturerobotics/objectsig",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Object signature wrapper.",
   "main": "dist/objectsig-js.umd.js",
   "module": "dist/objectsig-js.es5.js",
