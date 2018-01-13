@@ -1,0 +1,1 @@
+export { objectsig } from './objectsig'
