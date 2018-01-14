@@ -1,5 +1,4 @@
 import { objectsig } from './pb'
-import * as crypto from 'libp2p-crypto'
 
 import * as multihashes from 'multihashes'
 import multihashing from 'multihashing'
