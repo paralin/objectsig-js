@@ -22,6 +22,22 @@ export async function sign(privKey: any, data: Uint8Array): Promise<Uint8Array> 
     })
 }
 
+// verify verifies a signature with an async pattern
+export async function verify(pubKey: any, data: Uint8Array, sig: Uint8Array): Promise<boolean> {
+    return new Promise<boolean>((resolve, reject) => {
+        try {
+            pubKey.verify(data, sig, (err: any, valid: boolean) => {
+                if (err) {
+                    return reject(err)
+                }
+                resolve(valid)
+            })
+        } catch (e) {
+            reject(e)
+        }
+    })
+}
+
 // Signature extends the protobuf Signature object.
 export class Signature extends objectsig.Signature {
     constructor(obj: objectsig.ISignature) {
@@ -37,6 +53,17 @@ export class Signature extends objectsig.Signature {
         let ourKeyMulti = multihashes.decode(ourMh)
 
         return !(keyMulti.digest.compare(ourKeyMulti.digest))
+    }
+
+    // verify throws an error if the signature does not check out.
+    public async verify(pub: any, data: Uint8Array) {
+        if (!this.matchesPublicKey(pub)) {
+            throw new Error("object was not signed with given public key")
+        }
+
+        if (!(await verify(pub, data, this.signature))) {
+            throw new Error("signature failed to validate")
+        }
     }
 }
 

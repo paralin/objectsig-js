@@ -49,5 +49,6 @@ describe('signature', () => {
         let sigData = objectsig.Signature.encode(sig).finish()
         expect(sig.matchesPublicKey(privKey.public)).toEqual(true)
         expect(sigData).toEqual(toBuffer(expectedSigData))
+        await sig.verify(privKey.public, data)
     })
 })
