@@ -3,6 +3,7 @@ import commonjs from 'rollup-plugin-commonjs'
 import sourceMaps from 'rollup-plugin-sourcemaps'
 import camelCase from 'lodash.camelcase'
 import json from 'rollup-plugin-json'
+import nodeBuiltins from 'rollup-plugin-node-builtins'
 
 const pkg = require('./package.json')
 
@@ -37,5 +38,8 @@ export default {
 
         // Compile json files
         json(),
+
+        // Node built-ins
+        nodeBuiltins(),
     ],
 }
