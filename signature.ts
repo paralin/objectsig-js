@@ -3,7 +3,6 @@ import { objectsig } from './pb'
 import * as multihashes from 'multihashes'
 import multihashing from 'multihashing'
 import toBuffer from 'typedarray-to-buffer'
-import Buffer from 'buffer'
 
 // sign signs a message with an async pattern
 export async function sign(privKey: any, data: Uint8Array): Promise<Uint8Array> {
