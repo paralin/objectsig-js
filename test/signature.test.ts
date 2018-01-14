@@ -46,16 +46,8 @@ describe('signature', () => {
         expect(privKey).not.toBeNull()
         let sig = await newSignature(privKey, data)
         expect(sig).not.toBeNull()
-        console.log(privKey.public.bytes.toString('base64'))
-        console.log(JSON.stringify(sig))
         let sigData = objectsig.Signature.encode(sig).finish()
-        // NOTE: Test failing due to header varint inconsistency between Go and Js
-        // https://github.com/multiformats/js-multihash/issues/45
-        /*10,
-    -     34,
-    -     18,
-          32,
-          */
-        // expect(sigData).toEqual(toBuffer(expectedSigData))
+        expect(sig.matchesPublicKey(privKey.public)).toEqual(true)
+        expect(sigData).toEqual(toBuffer(expectedSigData))
     })
 })
