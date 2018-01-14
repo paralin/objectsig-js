@@ -39,7 +39,7 @@ export async function verify(pubKey: any, data: Uint8Array, sig: Uint8Array): Pr
 }
 
 // Signature extends the protobuf Signature object.
-export class Signature extends objectsig.Signature {
+export class Signature extends objectsig.Signature implements objectsig.ISignature {
     constructor(obj: objectsig.ISignature) {
         super(obj)
     }
