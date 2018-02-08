@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.2.0",
   "description": "Object signature wrapper.",
-  "main": "main.ts",
+  "main": "index.ts",
   "author": "Christian Stewart <christian@paral.in>",
   "repository": {
     "type": "git",
