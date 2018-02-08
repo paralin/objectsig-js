@@ -3,12 +3,7 @@
   "private": true,
   "version": "0.2.0",
   "description": "Object signature wrapper.",
-  "main": "dist/objectsig-js.umd.js",
-  "module": "dist/objectsig-js.es5.js",
-  "typings": "dist/types/objectsig-js.d.ts",
-  "files": [
-    "dist"
-  ],
+  "main": "main.ts",
   "author": "Christian Stewart <christian@paral.in>",
   "repository": {
     "type": "git",
