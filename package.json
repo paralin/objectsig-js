@@ -40,7 +40,7 @@
   },
   "jest": {
     "transform": {
-      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+      ".(ts|tsx)": "../../node_modules/ts-jest/preprocessor.js"
     },
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
     "moduleFileExtensions": [
@@ -66,17 +66,15 @@
   },
   "devDependencies": {
     "@types/es6-promise": "^3.3.0",
-    "@types/jest": "^21.1.0",
-    "@types/node": "^8.0.0",
+    "@types/jest": "^22.1.0",
+    "@types/node": "^9.4.5",
     "colors": "^1.1.2",
     "commitizen": "^2.9.6",
     "coveralls": "^3.0.0",
     "cross-env": "^5.0.1",
     "cz-conventional-changelog": "^2.0.0",
     "husky": "^0.14.0",
-    "jest": "^22.0.0",
     "lint-staged": "^6.0.0",
-    "lodash.camelcase": "^4.3.0",
     "prettier": "^1.4.4",
     "prompt": "^1.0.0",
     "replace-in-file": "^3.0.0-beta.2",
@@ -86,14 +84,14 @@
     "tslint": "^5.4.3",
     "tslint-config-prettier": "^1.1.0",
     "tslint-config-standard": "^7.0.0",
-    "typedoc": "^0.9.0",
-    "typescript": "^2.3.4",
+    "typedoc": "^0.10.0",
+    "typescript": "^2.6.2",
     "validate-commit-msg": "^2.12.2"
   },
   "dependencies": {
     "buffer": "^5.0.8",
     "elliptic": "^6.4.0",
-    "libp2p-crypto": "^0.11.0",
+    "libp2p-crypto": "^0.12.0",
     "multihashes": "^0.4.13",
     "multihashing": "^0.3.2",
     "node-webcrypto-ossl": "^1.0.33",
